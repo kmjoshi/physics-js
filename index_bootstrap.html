@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>Matter-js Setup</title>
+
+    <!-- MatterTools -->
+    <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+    <!--<script src="./node_modules/matter-tools/build/matter-tools.gui.js"></script>-->
+    <!--<script src="./node_modules/matter-tools/build/matter-tools.inspector.js"></script>-->
+    <!--<script src="./node_modules/matter-tools/build/matter-tools.demo.js"></script>-->
+
+    <!-- Matter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.12.0/matter.js"></script>
+    <!-- <script src="./node_modules/matter-js/build/matter-dev.js"></script> -->
+
+    <!-- libs -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.3/dat.gui.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <!-- <script src="bundle.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <!-- TeX-AMS-MML_CHTML -->
+    <script src="https://www.w3schools.com/lib/w3data.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.js"></script>
+
+    <!-- custom libs -->
+    <!-- <script src="menu.js"></script> -->
+    <script src="tooltips.js"></script>
+
+    <!-- Plugins -->
+    <!-- <script src="./matter-js/demo/lib/matter-wrap.js"></script> -->
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./layout.css">
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Physics with Matter-js</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="./index_bootstrap.html">Introduction <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./force.html">F=ma</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./momentum.html">Momentum</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./energyiswhatyouneed.html">Energy</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./youareslowingmedown.html">Friction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./youspinmerightround.html">Rotational Motion</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./entersandbox.html">Sandbox</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./iwanttolearnmore.html">More Resources!</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="./tellmeaboutyourself.html">About</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-auto">
+    <div class="card bg-transparent border-0">
+      <h5 class="card-title text-center">
+        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#barChart" aria-expanded="false" aria-controls="barChart">
+          Show Bar Chart
+        </button>
+      </h5>
+      <div class="collapse" id="barChart">
+          <svg width="400" height="400" id="equation">
+              <!--<div class="overlay" id="eqTooltip" onclick="off('overlay')">-->
+                  <!--<div class="text">This is the tutorial</div>-->
+              <!--</div>-->
+          </svg>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-auto">
+    <div class="card bg-transparent border-0">
+      <h5 class="card-title text-center">
+        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#lineChart" aria-expanded="false" aria-controls="lineChart">
+          Show Line Chart
+        </button>
+      </h5>
+      <div class="collapse" id="lineChart">
+          <svg width="400" height="400" id="d3">
+              <!--<div class="overlay" id="grTooltip" onclick="off('overlay')">-->
+                  <!--<div class="text">This is the tutorial</div>-->
+              <!--</div>-->
+          </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-md-center">
+  <div class="col-md-auto">
+    <div class="row">
+      <div class="btn-group-vertical" role="group" aria-label="nav-buttons" style="width: 150px; margin-bottom: 10px;">
+        <button class="btn btn-dark" style="margin-bottom: 2px;" onclick="location.href='./index.html'">Back</button>
+        <button class="btn btn-dark" style="margin-bottom: 2px;" id="startButton">Relaunch</button>
+        <button class="btn btn-dark" style="margin-bottom: 2px;" onclick="location.href='./force.html'">Next</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="btn-group-vertical" role="group" aria-label="nav-buttons" style="width: 150px;">
+        <button class="btn btn-dark" style="margin-bottom: 2px;" onclick=on('overlay')>?</button>
+        <button class="btn btn-dark" style="margin-bottom: 2px;">(Dead) Test Me!</button>
+        <button class="btn btn-dark" style="margin-bottom: 2px;">(Dead) More</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-auto">
+    <canvas id="sandbox">
+    </canvas>
+    <!--<div class="overlay" id="sbTooltip" onclick="off('sbTooltip')">-->
+        <!--<div class="text">This is the tutorial</div>-->
+    <!--</div>-->
+  </div>
+  <div class="col-md-auto">
+    <div class="datgui">
+    </div>
+  </div>
+</div>
+
+<div id="overlay" onclick="off('overlay')">
+  <div id="text">
+      Here we have a physics game engine flagged by helpful buttons. Don't forget the chart dropdowns to visualize the variables of the projectile, and the GUI to change the force acting on the projectile. <br> <br>
+      Try playing around with the ball and see how the variables change! <br>
+      In the future this will be populated with <a href="bootstraptour.com">bootstraptour.com</a><br>
+  </div>
+</div>
+<!--<div class="overlay" id="testTooltip" onclick="off('testTooltip')">-->
+    <!--<div class="text">This is the tutorial</div>-->
+<!--</div>-->
+<!--<div class="overlay" id="moreTooltip" onclick="off('moreTooltip')">-->
+    <!--<div class="text">This is the tutorial</div>-->
+<!--</div>-->
+
+<script src="d3_test4.js"></script>
+<script type="text/javascript" src="./intro.js"></script>
+
+</body>
+</html>

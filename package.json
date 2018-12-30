@@ -1,0 +1,19 @@
+{
+  "name": "physics-js",
+  "version": "1.0.0",
+  "description": "visual physics",
+  "main": "matter-js-setup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.gatech.edu/kjoshi36/physics-js.git"
+  },
+  "author": "Keshav Joshi",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "dat.gui": "^0.7.2"
+  }
+}
