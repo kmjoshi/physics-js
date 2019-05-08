@@ -1,14 +1,21 @@
+/* https://coolors.co/1a535c-4ecdc4-f7fff7-ff6b6b-ffe66d */
+
 body {
-    color: #DDDDDD;
-    background-color: #252525;
+    color: #35332b;
+    background-color: #F7FFF7;
     font-family: "Lucida Sans Unicode";
 }
 
 .header {
     padding: 0px;
     text-align: center;
-    background: #252525;
-    color: white;
+    background: #4ECDC4;
+    color: #F7FFF7;
+}
+
+.btn-color{
+    background: #FF6B6B;
+    color: #F7FFF7;
 }
 
 .box-container {
@@ -25,6 +32,7 @@ body {
     margin: auto;
     width: 800px;
     padding: 20px;
+    color: #1A535C;
 }
 
 .box {
@@ -53,7 +61,7 @@ body {
     order: 1;
     /*flex-grow: 1;*/
     /*display: inline-flex;*/
-    background-color: #252525;
+    /* background-color: #252525; */
     padding: 10px;
     /*margin-top: 0px;*/
     /*margin: auto;*/
@@ -174,17 +182,21 @@ body {
 }
 
 .legendOrdinal text.label {
-    fill: silver;
+    fill: #1A535C;
 }
 
 .axisBlack line{
-    stroke: white;
+    stroke: #1A535C;
 }
 
 .axisBlack path{
-    stroke: white;
+    stroke: #1A535C;
 }
 
 .axisBlack text{
-    fill: white;
+    fill: #1A535C;
+}
+
+.barObj {
+    fill: #F7FFF7;
 }

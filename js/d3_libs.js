@@ -5,6 +5,7 @@
 // trigger update on engine update and choose which series to create/render based on variables
 
 class d3line{
+    // class to create a single moving line
     constructor(x, y, now, limit, duration){
         this.limit = limit;
 
@@ -43,6 +44,7 @@ class d3line{
 }
 
 class d3Chart{
+    // class to create a moving line-chart
     constructor(){
         this.limit = 60;
         this.duration = 500;
@@ -174,6 +176,7 @@ class d3Chart{
 // let grChart = new d3Chart().create_chart();
 
 class add_equation {
+    // class to create equation chart
     constructor() {
         this.margin = {top: 10, right: 10, bottom: 10, left: 10};
         this.width = 400 - this.margin.left - this.margin.right;
@@ -193,6 +196,7 @@ class add_equation {
         this.eqn = this.svg.append('foreignObject')
             .attr('width', 400).attr('height', 100)
             .attr("transform", "translate(" + 0 + "," + 300 + ")")
+            // .attr('class', 'axisBlack')
             .attr('fill', 'grey')
             .attr('opacity', 0.9);
 
@@ -250,7 +254,8 @@ class add_equation {
             .attr("text-anchor", "middle")
             .attr('x', function (d, i) {return x(i) + x.bandwidth()/2})
             .attr("y", height - 10)
-            .attr("fill", "white");
+            // .attr("fill", "white")
+            .attr("class", "barObj");
 
         this.y = y;
         this.x = x;
