@@ -20,20 +20,17 @@
 
 </head>
 <body>
-<div w3-include-html="menu.html"></div>
-<script> w3IncludeHTML();</script>
-
 <nav class="navbar navbar-expand-lg navbar-dark header">
-  <a class="navbar-brand" href="#">Physics with Matter-js</a>
+  <a class="navbar-brand" href="../index.html">Physics with Matter-js</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="../index.html">Introduction <span class="sr-only">(current)</span></a>
-      </li>
       <li class="nav-item">
+        <a class="nav-link" href="./introduction.html">Introduction <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
         <a class="nav-link" href="./force.html">F=ma</a>
       </li>
       <li class="nav-item">
@@ -47,14 +44,14 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./youspinmerightround.html">Rotational Motion</a>
-      </li>
+      </li> -->
       <li class="nav-item">
-        <a class="nav-link" href="./entersandbox.html">Sandbox</a>
+        <a class="nav-link" href="http://brm.io/matter-js/demo/" title="Full-featured sandbox from the creator of Matter-js">Sandbox</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="./iwanttolearnmore.html">More Resources!</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item active">
         <a class="nav-link" href="./tellmeaboutyourself.html">About</a>
       </li>
     </ul>
@@ -72,11 +69,15 @@ This is still a work in progress please send any feeback to <a href="mailto:kjos
 Anything ranging from design, interaction, build tools, whether it (hypothetically) helps you learn? <br>
 <ul>
 TODO
-    <li>Dropdown selection on variables to plot on both D3 charts</li>
+    <li>Dropdown selection on variables to plot on both D3 charts. Problem: how to render a new MathJax object onClick?</li>
     <li>A walkthrough made with <a href="bootstraptour.com">bootstraptour.com</a></li>
-    <li>Multiple choice assessments</li>
-    <li>In-depth explanations for each topic</li>
+    <li>Multiple choice assessments for each module</li>
+    <li>In-depth explanations for each topic OR links to advanced resources</li>
 </ul>
+The blue print for all the sections is as follows:
+</div>
+<div class="box-container">
+<img src="../reference/outline.png" alt="blueprint" width="800px">
 </div>
 </body>
 </html>
